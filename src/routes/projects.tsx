@@ -9,9 +9,9 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
   head: () => ({
     meta: [
-      { title: "Projects — Meridian Builders, Austin TX" },
-      { name: "description", content: "A selection of residential, commercial, and hospitality projects delivered by Meridian Builders across Central Texas." },
-      { property: "og:title", content: "Projects — Meridian Builders" },
+      { title: "Projects — Jumbo Builders, Austin TX" },
+      { name: "description", content: "A selection of residential, commercial, and hospitality projects delivered by Jumbo Builders across Central Texas." },
+      { property: "og:title", content: "Projects — Jumbo Builders" },
     ],
   }),
 });

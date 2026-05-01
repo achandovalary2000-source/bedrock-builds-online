@@ -8,9 +8,9 @@ export const Route = createFileRoute("/materials")({
   component: MaterialsPage,
   head: () => ({
     meta: [
-      { title: "Construction Materials — Meridian Builders" },
-      { name: "description", content: "Premium construction materials available from Meridian Builders' Austin yard: concrete, structural steel, lumber, glass, masonry, and insulation." },
-      { property: "og:title", content: "Construction Materials — Meridian Builders" },
+      { title: "Construction Materials — Jumbo Builders" },
+      { name: "description", content: "Premium construction materials available from Jumbo Builders' Austin yard: concrete, structural steel, lumber, glass, masonry, and insulation." },
+      { property: "og:title", content: "Construction Materials — Jumbo Builders" },
     ],
   }),
 });

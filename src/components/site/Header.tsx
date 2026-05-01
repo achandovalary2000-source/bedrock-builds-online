@@ -17,10 +17,10 @@ export function Header() {
       <div className="container-prose flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-9 h-9 rounded-sm flex items-center justify-center" style={{ background: "var(--gradient-gold)" }}>
-            <span className="font-display text-xl text-gold-foreground">M</span>
+            <span className="font-display text-xl text-gold-foreground">J</span>
           </div>
           <div className="leading-tight">
-            <div className="font-display text-lg tracking-tight">Meridian Builders</div>
+            <div className="font-display text-lg tracking-tight">Jumbo Builders</div>
             <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Austin · Texas</div>
           </div>
         </Link>

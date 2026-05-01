@@ -10,9 +10,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact & Quote Request — Meridian Builders" },
-      { name: "description", content: "Request a construction quote or consultation. Meridian Builders responds within one business day." },
-      { property: "og:title", content: "Contact — Meridian Builders" },
+      { title: "Contact & Quote Request — Jumbo Builders" },
+      { name: "description", content: "Request a construction quote or consultation. Jumbo Builders responds within one business day." },
+      { property: "og:title", content: "Contact — Jumbo Builders" },
     ],
   }),
 });
@@ -79,7 +79,7 @@ function ContactPage() {
             </div>
             <div>
               <div className="eyebrow mb-3">Direct</div>
-              <p>(512) 555-0142<br /><a href="mailto:hello@meridianbuilders.co" className="text-gold hover:opacity-80">hello@meridianbuilders.co</a></p>
+              <p>(512) 555-0142<br /><a href="mailto:hello@jumbobuilders.co" className="text-gold hover:opacity-80">hello@jumbobuilders.co</a></p>
             </div>
             <div>
               <div className="eyebrow mb-3">Hours</div>
