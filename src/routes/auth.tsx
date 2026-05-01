@@ -7,7 +7,7 @@ import { useAuth } from "@/components/auth/AuthProvider";
 
 export const Route = createFileRoute("/auth")({
   component: AuthPage,
-  head: () => ({ meta: [{ title: "Admin Sign In — Meridian Builders" }] }),
+  head: () => ({ meta: [{ title: "Admin Sign In — Jumbo Builders" }] }),
 });
 
 function AuthPage() {

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Meridian Builders — Premium Construction in Austin, Texas" },
+      { title: "Jumbo Builders — Premium Construction in Austin, Texas" },
       { name: "description", content: "Architectural construction, materials, and project delivery across Central Texas. Established 2008." },
     ],
   }),
@@ -39,7 +39,7 @@ function Index() {
         <section className="relative h-[88vh] min-h-[600px] flex items-end overflow-hidden">
           <img
             src={heroImg}
-            alt="Meridian Builders construction site at dusk in Austin"
+            alt="Jumbo Builders construction site at dusk in Austin"
             className="absolute inset-0 w-full h-full object-cover"
             width={1920}
             height={1080}
@@ -54,7 +54,7 @@ function Index() {
               Building <em className="text-gradient-gold not-italic">enduring</em> places<br />across Central Texas.
             </h1>
             <p className="mt-8 text-lg text-muted-foreground max-w-xl animate-in fade-in duration-1000 delay-200">
-              Meridian Builders delivers residential, commercial, and hospitality construction with architectural precision and uncompromising material quality.
+              Jumbo Builders delivers residential, commercial, and hospitality construction with architectural precision and uncompromising material quality.
             </p>
             <div className="mt-10 flex flex-wrap gap-4 animate-in fade-in duration-1000 delay-300">
               <Link to="/contact" className="group inline-flex items-center gap-2 px-7 py-4 bg-gold text-gold-foreground rounded-sm text-sm font-medium hover:opacity-90 transition-opacity">
@@ -94,7 +94,7 @@ function Index() {
               </h2>
             </div>
             <p className="text-muted-foreground">
-              From custom hill country residences to downtown towers, every project carries the Meridian signature: premium materials, integrated design, and on-time delivery.
+              From custom hill country residences to downtown towers, every project carries the Jumbo signature: premium materials, integrated design, and on-time delivery.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-px bg-border">

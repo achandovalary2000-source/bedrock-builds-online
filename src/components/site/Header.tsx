@@ -20,7 +20,7 @@ export function Header() {
             <span className="font-display text-xl text-gold-foreground">M</span>
           </div>
           <div className="leading-tight">
-            <div className="font-display text-lg tracking-tight">Meridian Builders</div>
+            <div className="font-display text-lg tracking-tight">Jumbo Builders</div>
             <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Austin · Texas</div>
           </div>
         </Link>

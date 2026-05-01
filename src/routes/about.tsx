@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Meridian Builders, Austin Texas" },
-      { name: "description", content: "Meridian Builders is a premium general contractor founded in Austin in 2008, specializing in architectural construction across Central Texas." },
-      { property: "og:title", content: "About — Meridian Builders" },
+      { title: "About — Jumbo Builders, Austin Texas" },
+      { name: "description", content: "Jumbo Builders is a premium general contractor founded in Austin in 2008, specializing in architectural construction across Central Texas." },
+      { property: "og:title", content: "About — Jumbo Builders" },
     ],
   }),
 });
@@ -38,7 +38,7 @@ function AboutPage() {
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              Meridian Builders was founded by Daniel Ortiz and Sarah Whitfield in a converted East Austin warehouse in 2008. What began as a two-person remodeling shop has grown into a 64-person general contractor with a yard, a millwork shop, and self-performed concrete, framing, and finish trades.
+              Jumbo Builders was founded by Daniel Ortiz and Sarah Whitfield in a converted East Austin warehouse in 2008. What began as a two-person remodeling shop has grown into a 64-person general contractor with a yard, a millwork shop, and self-performed concrete, framing, and finish trades.
             </p>
             <p>
               We believe great buildings come from a tight feedback loop between architect, builder, and craftsman. We staff every project with a salaried superintendent and project manager who stay from day one through the final punch list — no rotation, no handoffs.

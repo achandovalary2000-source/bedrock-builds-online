@@ -9,7 +9,7 @@ import { Trash2, Plus, LogOut } from "lucide-react";
 
 export const Route = createFileRoute("/admin")({
   component: AdminPage,
-  head: () => ({ meta: [{ title: "Admin — Meridian Builders" }] }),
+  head: () => ({ meta: [{ title: "Admin — Jumbo Builders" }] }),
 });
 
 type Material = { id: string; name: string; category: string; description: string | null; unit: string; price_per_unit: number | null; in_stock: boolean; sort_order: number };
