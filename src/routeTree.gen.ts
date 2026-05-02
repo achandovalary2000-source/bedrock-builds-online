@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SpaRouteImport } from './routes/spa'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MaterialsRouteImport } from './routes/materials'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -16,7 +17,14 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SpaServicesRouteImport } from './routes/spa.services'
+import { Route as SpaBookRouteImport } from './routes/spa.book'
 
+const SpaRoute = SpaRouteImport.update({
+  id: '/spa',
+  path: '/spa',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
@@ -52,6 +60,16 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SpaServicesRoute = SpaServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => SpaRoute,
+} as any)
+const SpaBookRoute = SpaBookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => SpaRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +79,9 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/materials': typeof MaterialsRoute
   '/projects': typeof ProjectsRoute
+  '/spa': typeof SpaRouteWithChildren
+  '/spa/book': typeof SpaBookRoute
+  '/spa/services': typeof SpaServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +91,9 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/materials': typeof MaterialsRoute
   '/projects': typeof ProjectsRoute
+  '/spa': typeof SpaRouteWithChildren
+  '/spa/book': typeof SpaBookRoute
+  '/spa/services': typeof SpaServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +104,9 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/materials': typeof MaterialsRoute
   '/projects': typeof ProjectsRoute
+  '/spa': typeof SpaRouteWithChildren
+  '/spa/book': typeof SpaBookRoute
+  '/spa/services': typeof SpaServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +118,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/materials'
     | '/projects'
+    | '/spa'
+    | '/spa/book'
+    | '/spa/services'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +130,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/materials'
     | '/projects'
+    | '/spa'
+    | '/spa/book'
+    | '/spa/services'
   id:
     | '__root__'
     | '/'
@@ -109,6 +142,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/materials'
     | '/projects'
+    | '/spa'
+    | '/spa/book'
+    | '/spa/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,10 +155,18 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   MaterialsRoute: typeof MaterialsRoute
   ProjectsRoute: typeof ProjectsRoute
+  SpaRoute: typeof SpaRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/spa': {
+      id: '/spa'
+      path: '/spa'
+      fullPath: '/spa'
+      preLoaderRoute: typeof SpaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
@@ -172,8 +216,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/spa/services': {
+      id: '/spa/services'
+      path: '/services'
+      fullPath: '/spa/services'
+      preLoaderRoute: typeof SpaServicesRouteImport
+      parentRoute: typeof SpaRoute
+    }
+    '/spa/book': {
+      id: '/spa/book'
+      path: '/book'
+      fullPath: '/spa/book'
+      preLoaderRoute: typeof SpaBookRouteImport
+      parentRoute: typeof SpaRoute
+    }
   }
 }
+
+interface SpaRouteChildren {
+  SpaBookRoute: typeof SpaBookRoute
+  SpaServicesRoute: typeof SpaServicesRoute
+}
+
+const SpaRouteChildren: SpaRouteChildren = {
+  SpaBookRoute: SpaBookRoute,
+  SpaServicesRoute: SpaServicesRoute,
+}
+
+const SpaRouteWithChildren = SpaRoute._addFileChildren(SpaRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -183,6 +253,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   MaterialsRoute: MaterialsRoute,
   ProjectsRoute: ProjectsRoute,
+  SpaRoute: SpaRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
