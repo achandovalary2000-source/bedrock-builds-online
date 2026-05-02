@@ -41,8 +41,8 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Jumbo Builders — Premium Construction in Austin, Texas" },
       { name: "twitter:description", content: "Jumbo Builders crafts enduring residential, commercial, and hospitality projects across Central Texas. Premium materials, architectural precision." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2a897000-d170-4549-bff3-d22badd7cf21/id-preview-d1dea31a--b77c979f-ab46-4756-8f71-b541206c328d.lovable.app-1777660683788.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2a897000-d170-4549-bff3-d22badd7cf21/id-preview-d1dea31a--b77c979f-ab46-4756-8f71-b541206c328d.lovable.app-1777660683788.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/883aaf73-6368-4bf8-af31-642ce7dbb6d0" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/883aaf73-6368-4bf8-af31-642ce7dbb6d0" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
